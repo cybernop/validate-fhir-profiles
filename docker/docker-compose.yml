@@ -1,0 +1,12 @@
+services:
+  validate-fhir-profiles-base:
+    image: ghcr.io/cybernop/validate-fhir-profiles:base-ubuntu
+    build:
+      target: base-ubuntu
+
+  validate-fhir-profiles:
+    image: ghcr.io/cybernop/validate-fhir-profiles:latest
+    build:
+      args:
+        - OS_BASE=ubuntu
+        - VAL_VERSION=6.3.20
