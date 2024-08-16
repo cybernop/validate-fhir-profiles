@@ -2,11 +2,13 @@
 
 [![Docker Images](https://github.com/cybernop/validate-fhir-profiles/actions/workflows/docker.yml/badge.svg)](https://github.com/cybernop/validate-fhir-profiles/actions/workflows/docker.yml)
 
+This repository provides Docker image to validate FHIR profiles the HAPI Java Validator.
+
 ## Docker Image
 
 The build information can be found in `docker/`.
 
-Build FHIR profiles for FSH sushi project in `<project dir>`.
+Validate FHIR profiles in `<project dir>`.
 
 ```bash
 docker run --rm -u $(id -u):$(id -g) \
