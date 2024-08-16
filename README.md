@@ -1,5 +1,7 @@
 # validate-fhir-profiles
 
+[![Docker Images](https://github.com/cybernop/validate-fhir-profiles/actions/workflows/docker.yml/badge.svg)](https://github.com/cybernop/validate-fhir-profiles/actions/workflows/docker.yml)
+
 ## Docker Image
 
 The build information can be found in `docker/`.
