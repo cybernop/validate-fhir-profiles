@@ -1,7 +1,13 @@
 ARG OS_BASE
 
-FROM ubuntu AS base-ubuntu
+FROM alpine:3.20 AS base-alpine
 
+RUN apk add --update \
+    wget \
+    openjdk21-jdk
+
+
+FROM ubuntu:24.04 AS base-ubuntu
 
 RUN apt update \
     && apt install -y \

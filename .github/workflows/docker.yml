@@ -17,7 +17,7 @@ env:
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
-  PLATFORMS: linux/amd64
+  PLATFORMS: linux/amd64,linux/arm64
 
 jobs:
   build-base-image:
@@ -26,7 +26,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ["ubuntu"]
+        os: ["ubuntu", "alpine"]
     permissions:
       contents: read
       packages: write
@@ -84,7 +84,7 @@ jobs:
             - "6.3.18"
             - "6.3.19"
             - "6.3.20"
-        os: ["ubuntu"]
+        os: ["ubuntu", "alpine"]
     permissions:
       contents: read
       packages: write
